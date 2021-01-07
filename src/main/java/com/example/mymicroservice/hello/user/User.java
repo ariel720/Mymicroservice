@@ -2,18 +2,23 @@ package com.example.mymicroservice.hello.user;
 
 import java.util.Date;
 
-//import com.shinhee.user.Past;
-//import com.shinhee.user.Size;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue
+	private Integer id;
 	
-private Integer id;
-	
-	//@Size(min=2, message="Name should have atleasst 2 characters") //connected to UserResouce validation annot
+	@Size(min=2, message="Name should have atleasst 2 characters") //connected to UserResouce validation annot
 	private String name;
 	
-	//@Past
+	@Past
 	private Date birthDate;
 	
 	//create Constructor -> getter&setter -> toString

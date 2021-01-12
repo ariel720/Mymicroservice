@@ -22,6 +22,9 @@ public class User {
 	private Date birthDate;
 	
 	//create Constructor -> getter&setter -> toString
+	
+	public User() {
+	}
 
 	public User(Integer id, String name, Date birthDate) {
 		super();
